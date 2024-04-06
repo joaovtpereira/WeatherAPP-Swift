@@ -25,20 +25,39 @@ struct HomeView: View {
                 .padding(.top, 257)
             
             // MARK: Content informations weather
-            VStack {
+            VStack(spacing: -10) {
                 Text("Uberlândia")
                     .font(.largeTitle)
                 
                 VStack {
-                    Text("19°" + "\n" + "Tempo Limpo")
-                    Text("H:24°   L:18°")
-                        .font(.title3.weight(.semibold))
+                    Text(attributedString)                    
                 }
                 
                 Spacer()
             }
             .padding(.top, 51)
         }
+    }
+    
+    private var attributedString: AttributedString {
+        var string = AttributedString("19°" + "\n " + "Tempo Limpo")
+        
+        if let temp = string.range(of: "19°") {
+            string[temp].font = .system(size: 96, weight: .thin)
+            string[temp].foregroundColor = .primary
+        }
+        
+        if let pipe = string.range(of: " | ") {
+            string[pipe].font = .title3.weight(.semibold)
+            string[pipe].foregroundColor = .secondary
+        }
+        
+        if let weather = string.range(of: "Tempo Limpo") {
+            string[weather].font = .title3.weight(.semibold)
+            string[weather].foregroundColor = .secondary
+        }
+        
+        return string
     }
 }
 
