@@ -18,6 +18,26 @@ struct HomeView: View {
             Image("Background")
                 .resizable()
                 .ignoresSafeArea()
+            
+            // MARK: HOUSE IMAGE
+            Image("House")
+                .frame(maxHeight: .infinity, alignment: .top)
+                .padding(.top, 257)
+            
+            // MARK: Content informations weather
+            VStack {
+                Text("Uberlândia")
+                    .font(.largeTitle)
+                
+                VStack {
+                    Text("19°" + "\n" + "Tempo Limpo")
+                    Text("H:24°   L:18°")
+                        .font(.title3.weight(.semibold))
+                }
+                
+                Spacer()
+            }
+            .padding(.top, 51)
         }
     }
 }
@@ -25,5 +45,6 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+            .preferredColorScheme(.dark)
     }
 }
