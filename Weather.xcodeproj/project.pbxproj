@@ -14,6 +14,9 @@
 		4683910F2BC1E48D00419C7A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4683910E2BC1E48D00419C7A /* Extensions.swift */; };
 		468391112BC1E5BF00419C7A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468391102BC1E5BF00419C7A /* HomeView.swift */; };
 		468391132BC21AF500419C7A /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468391122BC21AF500419C7A /* TabBar.swift */; };
+		46BD699C2BC45E9F00C51452 /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BD699B2BC45E9F00C51452 /* Shapes.swift */; };
+		46BD69A82BC4833C00C51452 /* BottomSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 46BD69A72BC4833C00C51452 /* BottomSheet */; };
+		46BD69AA2BC48C1B00C51452 /* ForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BD69A92BC48C1B00C51452 /* ForecastView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,8 @@
 		4683910E2BC1E48D00419C7A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		468391102BC1E5BF00419C7A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		468391122BC21AF500419C7A /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		46BD699B2BC45E9F00C51452 /* Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
+		46BD69A92BC48C1B00C51452 /* ForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46BD69A82BC4833C00C51452 /* BottomSheet in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				4683910E2BC1E48D00419C7A /* Extensions.swift */,
+				46BD699B2BC45E9F00C51452 /* Shapes.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -121,6 +128,7 @@
 		4683910C2BC1E40C00419C7A /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				46BD69A92BC48C1B00C51452 /* ForecastView.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -148,6 +156,9 @@
 			dependencies = (
 			);
 			name = Weather;
+			packageProductDependencies = (
+				46BD69A72BC4833C00C51452 /* BottomSheet */,
+			);
 			productName = Weather;
 			productReference = 468390F62BC1E22B00419C7A /* Weather.app */;
 			productType = "com.apple.product-type.application";
@@ -176,6 +187,9 @@
 				Base,
 			);
 			mainGroup = 468390ED2BC1E22B00419C7A;
+			packageReferences = (
+				46BD69A62BC4833C00C51452 /* XCRemoteSwiftPackageReference "BottomSheet" */,
+			);
 			productRefGroup = 468390F72BC1E22B00419C7A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -206,7 +220,9 @@
 				468391112BC1E5BF00419C7A /* HomeView.swift in Sources */,
 				4683910F2BC1E48D00419C7A /* Extensions.swift in Sources */,
 				468390FA2BC1E22B00419C7A /* WeatherApp.swift in Sources */,
+				46BD69AA2BC48C1B00C51452 /* ForecastView.swift in Sources */,
 				468391132BC21AF500419C7A /* TabBar.swift in Sources */,
+				46BD699C2BC45E9F00C51452 /* Shapes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +423,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		46BD69A62BC4833C00C51452 /* XCRemoteSwiftPackageReference "BottomSheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Wouter125/BottomSheet";
+			requirement = {
+				kind = exactVersion;
+				version = 1.4.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		46BD69A72BC4833C00C51452 /* BottomSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 46BD69A62BC4833C00C51452 /* XCRemoteSwiftPackageReference "BottomSheet" */;
+			productName = BottomSheet;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 468390EE2BC1E22B00419C7A /* Project object */;
 }
